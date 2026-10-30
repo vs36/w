@@ -407,6 +407,7 @@ const CONFIG = {
   allowAddPhotos: false,
   bride: { en: 'Sowmya', te: 'సౌమ్య' },
   groom: { en: 'Venkat', te: 'వెంకట్' },
+  heroGroom: { en: 'Venkat Sai', te: 'వెంకట్ సాయి' },   // name shown in the top section
   weddingDate: '2026-11-20',                  // Muhurtham date
   inviteDate: '2026-11-19',                   // date shown in the first section
     invocation: { en: '|| Sri Ganeshaya Namaha ||', te: '|| శ్రీ గణేశాయ నమః ||' },
@@ -711,7 +712,7 @@ function heroHtml() {
     <div class="wrap hero-in">
       <p class="invoc">${esc(t(c.invocation))}</p>
       <p class="lead">${esc(t(c.lead))}</p>
-      <h1 class="names"><span class="n">${esc(t(c.groom))}</span><span class="amp">&amp;</span><span class="n">${esc(t(c.bride))}</span></h1>
+      <h1 class="names"><span class="n">${esc(t(c.heroGroom || c.groom))}</span><span class="amp">&amp;</span><span class="n">${esc(t(c.bride))}</span></h1>
       <div class="daterow"><p class="when">${esc(longDate(c.inviteDate))}</p></div>
       <div class="ctas">
         <button class="btn" type="button" data-go="couple">${esc(t(UI.open))}</button>
